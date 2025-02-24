@@ -1,0 +1,179 @@
+html, body{
+    font-family: 'Poppins',sans-serif;
+}
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    /* Keep above other content */
+    background-color: white;
+    /* Ensure visibility */
+    border-bottom: 1px solid #ddd;
+    /* Optional: Add a border */
+}
+
+
+#sidebar {
+    padding-left: 0 !important;
+    padding-right: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    
+    height: 100vh;
+
+    width:280px; /* Adjust width as needed */
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.accordion-button {
+    padding-left: 10px;
+   
+    padding-right: 10px;
+    /* Ensure no extra space */
+    width: 100% !important;
+}
+
+/* Remove Unwanted Margin */
+.accordion-item {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+
+.logo {
+    left: 0%;
+}
+
+/* Hide scrollbar but allow scrolling */
+.dropdown-menu {
+    max-height: 300px;
+    /* Adjust height if needed */
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer/Edge */
+}
+
+
+.dropdown-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.content{
+    width:90%;
+}
+.main-content{
+    margin-top: 90px;
+    width:90%;
+    margin-left: 40px;
+}
+
+.card{
+    margin-left: 10px;
+    margin-right: 10px;
+width:98%;
+}
+.card1{
+ width: 100%;
+ height: 250px;
+}
+#editor-container{
+    width: 100%;
+    height: 150px;
+}
+.profile-container {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+.camera-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgb(219, 216, 216);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type='file'] {
+    display: none;
+}
+  /* Custom sidebar width */
+  .offcanvas-start {
+    width: 200px;
+}
+
+.sidebar {
+    height: 100vh;
+    background-color: #f8f9fa;
+    position: fixed;
+    margin-top: 0px;
+    left: 0;
+    padding-top: 0px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1050;
+}
+
+@media (min-width: 992px) {
+    #sidebar {
+        position: fixed;
+        left: 0;
+        top: 70px;
+        /* Height of Navbar */
+        height: calc(100vh - 56px);
+        /* Full height minus navbar */
+        
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-right: 1px solid #ddd;
+        z-index: 1040;
+        transform: none !important;
+    }
+}
+
+/* Content Adjusted to Avoid Overlapping */
+.content {
+    margin-top: 60px;
+    /* Push content below navbar */
+}
+
+@media (min-width: 992px) {
+    .content {
+        margin-left: 250px;
+        /* Ensure content doesn't go under sidebar */
+    }
+}
+.accordion-button {
+    display: flex;
+    justify-content: space-between; /* Pushes content and arrow apart */
+    align-items: center;
+}
+.accordion-button img {
+    margin-right: 10px; /* Space between icon and text */
+}
+.accordion-body{
+    margin-left: 30px;
+}
